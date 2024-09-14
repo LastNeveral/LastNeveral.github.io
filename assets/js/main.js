@@ -194,3 +194,15 @@ document.addEventListener('DOMContentLoaded', function () {
     videoObserver.observe(video);
   });
 });
+
+const video = document.getElementById('myVideo');
+
+video.play().then(() => {
+  // 自动播放成功，无需处理
+  console.log("Video is playing with sound.");
+}).catch((error) => {
+  // 自动播放失败，静音后重新播放
+  console.log("Autoplay failed. Muting video and retrying autoplay.");
+  video.muted = true;
+  video.play();
+});
