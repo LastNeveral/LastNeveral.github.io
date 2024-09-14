@@ -12,6 +12,7 @@
 
   <!--==================== CSS ====================-->
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/VedioContainer.css" />
   <!-- iconfont font class 方式引用图标 -->
   <!-- <link
       rel="stylesheet"
@@ -21,7 +22,7 @@
   <title>Personal show</title>
 </head>
 
-<body>
+<body class="dark-theme">
   <!--==================== HEADER ====================-->
   <header class="header scroll-header" id="header">
     <nav class="nav container">
@@ -36,21 +37,21 @@
             </a>
           </li>
           <li class="nav__item">
-            <a href="#about" class="nav__link">
+            <a href="#Movie" class="nav__link">
               <i class="uil uil-user nav__icon"></i>
-              <p i18n="about">About</p>
+              <p i18n="about">Movie</p>
             </a>
           </li>
           <li class="nav__item">
-            <a href="#portfolio" class="nav__link">
+            <a href="#Game" class="nav__link">
               <i class="uil uil-scenery nav__icon"></i>
-              <p i18n="portfolio">Portfolio</p>
+              <p i18n="Movie">Game</p>
             </a>
           </li>
           <li class="nav__item">
-            <a href="#contact" class="nav__link">
+            <a href="#Ani" class="nav__link">
               <i class="uil uil-message nav__icon"></i>
-              <p i18n="contact">Contactme</p>
+              <p i18n="contact">Ani </p>
             </a>
           </li>
           <!-- <li class="nav__item">
@@ -65,12 +66,12 @@
         <i class="uil uil-times nav__close" id="nav-close"></i>
       </div>
 
-      <div class="nav__btns">
+      <!-- <div class="nav__btns">
         <i class="uil uil-moon change-theme" id="theme-button"></i>
         <div class="nav__toggle" id="nav-toggle">
           <i class="uil uil-apps"></i>
         </div>
-      </div>
+      </div> -->
     </nav>
   </header>
 
@@ -131,10 +132,10 @@
             <p class="home__description" i18n="home__description">
               This is just a life page which means that there isn't relate to my work.
             </p>
-            <a href="#contact" class="button button-flex">
+            <!-- <a href="#contact" class="button button-flex">
               <span i18n="home__contact">Contact Me</span>
               <i class="uil uil-message button__icon"></i>
-            </a>
+            </a> -->
           </div>
         </div>
         <div class="home__scroll">
@@ -148,27 +149,51 @@
     </section>
 
     <!--==================== Movie ====================-->
-    <section class="about section" id="about">
-      <h2 class="section__title" i18n="about__title">Movie!!!</h2>
-      <span class="section__subtitle" i18n="about__subtitle">Please waiting!!!!!</span>
-      <div class="about__container container grid">
+    <section class="Movie section" id="Movie">
+      <div class="video-container">
+        <!-- <h2 class="section__title" i18n="about__title">Movie!!!</h2> -->
+        <video autoplay loop class="background-video">
+          <source src=".\DB\Movie\Dead_Poets_Society.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay-text">
+          <h1>DEAD POETS SOCIETY</h1>
+          <p>O Captain! My Captain!</p>
+        </div>
+        <!-- <span class="section__subtitle" i18n="about__subtitle">Please waiting!!!!!</span> -->
+        <div class="about__container container grid">
+        </div>
       </div>
     </section>
 
-    <!--==================== GAME ====================-->
-    <section class="about section" id="about">
-      <h2 class="section__title" i18n="about__title">GAME!!!</h2>
-      <span class="section__subtitle" i18n="about__subtitle">Please waiting!!!!!</span>
-      <div class="about__container container grid">
-      </div>
+    <!--==================== Game ====================-->
+    <section class="about section" id="Game">
+      <div class="video-container">
+        <video autoplay loop class="background-video">
+          <source src=".\DB\Game\wukong.MP4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay-text">
+          <h1>黑神话：悟空</h1>
+          <p>若一去不回，便一去不回</p>
+        </div>
+        <div class="about__container container grid">
+        </div>
     </section>
 
     <!--==================== Ani ====================-->
-    <section class="about section" id="about">
-      <h2 class="section__title" i18n="about__title">Ani!!!</h2>
-      <span class="section__subtitle" i18n="about__subtitle">Please waiting!!!!!</span>
-      <div class="about__container container grid">
-      </div>
+    <section class="about section" id="Ani">
+      <div class="video-container">
+        <video autoplay loop class="background-video">
+          <source src=".\DB\Ani\Red_Pipes.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay-text">
+          <h1>パプリカ</h1>
+          <p>best.</p>
+        </div>
+        <div class="about__container container grid">
+        </div>
     </section>
 
 
@@ -185,10 +210,13 @@
 
         <ul class="footer__links">
           <li>
-            <a href="#portfolio" class="footer__link" i18n="portfolio">Portfolio</a>
+            <a href="#Movie" class="footer__link" i18n="portfolio">Movie</a>
           </li>
           <li>
-            <a href="#contact" class="footer__link" i18n="contact">Contact</a>
+            <a href="#Game" class="footer__link" i18n="contact">Game</a>
+          </li>
+          <li>
+            <a href="#Ani" class="footer__link" i18n="contact">Ani</a>
           </li>
         </ul>
 
@@ -207,7 +235,7 @@
       </div>
 
       <p class="footer__copy">
-        &#169;Haoao
+        Haoao &#169; 2024
       </p>
     </div>
   </footer>
@@ -216,6 +244,7 @@
   <a href="#" class="scrollup" id="scroll-up">
     <i class="uil uil-arrow-up scrollup__icon"></i>
   </a>
+
   <!--==================== SWIPER JS ====================-->
   <script src="assets/js/swiper-bundle.min.js"></script>
 
@@ -224,8 +253,13 @@
   <!-- jquery -->
   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="assets/js/jquery.i18n.min.js"></script>
+
+  <!-- nav-hidden JS -->
+  <script src="assets/js/nav-hidden.js"></script>
+
   <!--==================== MAIN JS ====================-->
   <script src="assets/js/main.js"></script>
+
 
   <!-- translate JS -->
   <script src="assets/js/cn-en-translate.js"></script>

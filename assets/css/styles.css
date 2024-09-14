@@ -12,10 +12,10 @@
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
-  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  /* --first-color-second: hsl(var(--hue-color), 69%, 61%); */
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
+  /* --title-color: hsl(var(--hue-color), 8%, 15%); */
   --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
@@ -24,12 +24,14 @@
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
+  --first-color-second: rgb(0, 0, 0);
+  --title-color: rgb(255, 255, 255);
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 2rem;
-  --h1-font-size: 1.5rem;
+  --h1-font-size: 3rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
   --normal-font-size: .938rem;
@@ -61,7 +63,7 @@
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3rem;
-    --h1-font-size: 2.25rem;
+    --h1-font-size: 3rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
@@ -143,9 +145,9 @@ img {
 }
 
 /*==================== REUSABLE CSS CLASSES ====================*/
-.section {
-  padding: 2rem 0 4rem;
-}
+/* .section { */
+/* padding: 2rem 0 4rem; */
+/* } */
 
 .section__title {
   font-size: var(--h1-font-size);
@@ -183,6 +185,8 @@ img {
   z-index: var(--z-fixed);
   background-color: rgba(var(--body-color), 0.9);
   backdrop-filter: blur(5px);
+
+  transition: all 0.6s ease-out;
 }
 
 /*==================== NAV ====================*/
@@ -297,6 +301,12 @@ img {
 }
 
 /*==================== HOME ====================*/
+.home {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 100vh;
+}
+
 .home__container {
   gap: 1rem;
 }
@@ -784,9 +794,9 @@ img {
 }
 
 /*==================== FOOTER ====================*/
-.footer {
+/* .footer {
   padding-top: 2rem;
-}
+} */
 
 .footer__container {
   row-gap: 3.5rem;
@@ -855,7 +865,7 @@ img {
   right: 1rem;
   bottom: -20%;
   background-color: var(--first-color);
-  opacity: .8;
+  opacity: .5;
   padding: 0 .3rem;
   border-radius: .4rem;
   z-index: var(--z-tooltip);
@@ -1000,9 +1010,9 @@ img {
       margin: 0;
     }
 
-    .section {
+    /* .section {
       padding: 6rem 0 2rem;
-    }
+    } */
 
     .section__subtitle {
       margin-bottom: 4rem;
@@ -1016,7 +1026,7 @@ img {
     .header,
     .main,
     .footer__container {
-      padding: 0 1rem;
+      padding: 0 0rem;
     }
 
     .nav {

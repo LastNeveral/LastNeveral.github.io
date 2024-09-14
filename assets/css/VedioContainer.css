@@ -1,0 +1,56 @@
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+
+    /* 动画设置 */
+    opacity: 0;
+    /* 开始时透明 */
+    transition: opacity 0.5s ease-out;
+    /* 为平滑过渡添加的样式 */
+}
+
+/* 当元素进入视口时，触发的动画效果 */
+.overlay-text.active {
+    animation: floatUp 1s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translate(-50%, -20%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.overlay-text h1 {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+}
