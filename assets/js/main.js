@@ -188,21 +188,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }, {
     threshold: [0.5] // 设置为0.5表示观察当视频有一半进入视口时
   });
-
   // 开始观察所有视频元素
   videos.forEach(video => {
     videoObserver.observe(video);
   });
-});
-
-const video = document.getElementById('myVideo');
-
-video.play().then(() => {
-  // 自动播放成功，无需处理
-  console.log("Video is playing with sound.");
-}).catch((error) => {
-  // 自动播放失败，静音后重新播放
-  console.log("Autoplay failed. Muting video and retrying autoplay.");
-  video.muted = true;
-  video.play();
 });

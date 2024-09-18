@@ -252,6 +252,7 @@ img {
   font-weight: var(--font-medium);
   cursor: pointer;
   text-transform: capitalize;
+  transition: all 0.5s;
 }
 
 .nav__link:hover {
@@ -1062,6 +1063,7 @@ img {
 
     .nav__menu {
       margin-left: auto;
+      transition: all, 0.8s;
     }
 
     .change-theme {

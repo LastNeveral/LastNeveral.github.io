@@ -39,19 +39,19 @@
           <li class="nav__item">
             <a href="#Movie" class="nav__link">
               <i class="uil uil-user nav__icon"></i>
-              <p i18n="about">Movie</p>
+              <p i18n="Movie">Movie</p>
             </a>
           </li>
           <li class="nav__item">
             <a href="#Game" class="nav__link">
               <i class="uil uil-scenery nav__icon"></i>
-              <p i18n="Movie">Game</p>
+              <p i18n="Game">Game</p>
             </a>
           </li>
           <li class="nav__item">
             <a href="#Ani" class="nav__link">
               <i class="uil uil-message nav__icon"></i>
-              <p i18n="contact">Ani </p>
+              <p i18n="Ani">Ani </p>
             </a>
           </li>
           <!-- <li class="nav__item">
@@ -151,7 +151,7 @@
     <!--==================== Movie ====================-->
     <section class="Movie section" id="Movie">
       <div class="video-container">
-        <!-- <h2 class="section__title" i18n="about__title">Movie!!!</h2> -->
+        <div class="change left_change" id="Movie"></div>
         <video autoplay loop class="background-video">
           <source src=".\DB\Movie\Dead_Poets_Society.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -161,14 +161,15 @@
           <p>O Captain! My Captain!</p>
         </div>
         <!-- <span class="section__subtitle" i18n="about__subtitle">Please waiting!!!!!</span> -->
-        <div class="about__container container grid">
-        </div>
+        <div class="about__container container grid"></div>
+        <div class="change right_change" id="Movie"></div>
       </div>
     </section>
 
     <!--==================== Game ====================-->
     <section class="about section" id="Game">
       <div class="video-container">
+        <div class="change left_change" id="Game"></div>
         <video autoplay loop class="background-video">
           <source src=".\DB\Game\wukong.MP4" type="video/mp4">
           Your browser does not support the video tag.
@@ -177,14 +178,16 @@
           <h1>黑神话：悟空</h1>
           <p>若一去不回，便一去不回</p>
         </div>
-        <div class="about__container container grid">
-        </div>
+        <div class="about__container container grid"> </div>
+        <div class="change right_change" id="Game"></div>
+      </div>
     </section>
 
     <!--==================== Ani ====================-->
     <section class="about section" id="Ani">
       <div class="video-container">
-        <video controls autoplay loop class="background-video">
+        <div class="change left_change" id="Ani"></div>
+        <video autoplay loop class="background-video">
           <source src=".\DB\Ani\Red_Pipes.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -192,8 +195,9 @@
           <h1>パプリカ</h1>
           <p>best.</p>
         </div>
-        <div class="about__container container grid">
-        </div>
+        <div class="about__container container grid"></div>
+        <div class="change right_change" id="Ani"></div>
+      </div>
     </section>
 
 
@@ -259,7 +263,6 @@
 
   <!--==================== MAIN JS ====================-->
   <script src="assets/js/main.js"></script>
-
 
   <!-- translate JS -->
   <script src="assets/js/cn-en-translate.js"></script>
