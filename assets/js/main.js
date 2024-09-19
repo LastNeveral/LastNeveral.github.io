@@ -124,37 +124,6 @@ function scrollUp() {
 }
 window.addEventListener('scroll', scrollUp)
 
-/*==================== DARK LIGHT THEME & LANGUAGE====================*/
-
-// const themeButton = document.getElementById('theme-button')
-// const darkTheme = 'dark-theme'
-// const iconTheme = 'uil-sun'
-// const language = 'cn'
-
-// // Previously selected topic (if user selected)
-// const selectedTheme = localStorage.getItem('selected-theme')
-// const selectedIcon = localStorage.getItem('selected-icon')
-
-// // We obtain the current theme that the interface has by validating the dark-theme class
-// const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-// const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
-
-// // We validate if the user previously chose a topic
-// if (selectedTheme) {
-//   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-//   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-//   themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-// }
-
-// // Activate / deactivate the theme manually with the button
-// themeButton.addEventListener('click', () => {
-//     // Add or remove the dark / icon theme
-//     document.body.classList.toggle(darkTheme)
-//     themeButton.classList.toggle(iconTheme)
-//     // We save the theme and the current icon that the user chose
-//     localStorage.setItem('selected-theme', getCurrentTheme())
-//     localStorage.setItem('selected-icon', getCurrentIcon())
-// })
 
 document.addEventListener('scroll', function () {
   const overlayTexts = document.querySelectorAll('.overlay-text');
@@ -172,6 +141,7 @@ document.addEventListener('scroll', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   const videos = document.querySelectorAll('.background-video'); // 选择所有视频
+  const viewportHeight = window.innerHeight;
 
   // 创建IntersectionObserver回调函数
   const videoObserver = new IntersectionObserver((entries) => {
@@ -179,14 +149,14 @@ document.addEventListener('DOMContentLoaded', function () {
       const video = entry.target; // 当前的目标视频
 
       // 检查是否超过一半进入视口
-      if (entry.intersectionRatio > 0.5) {
+      if (entry.intersectionRect.height > viewportHeight / 2) {
         video.play();  // 超过一半播放
       } else {
         video.pause(); // 否则暂停
       }
     });
   }, {
-    threshold: [0.5] // 设置为0.5表示观察当视频有一半进入视口时
+    threshold: [0, 0.2, 0.4, 0.6, 0.8, 1] // 设置为0.5表示观察当视频有一半进入视口时
   });
   // 开始观察所有视频元素
   videos.forEach(video => {
