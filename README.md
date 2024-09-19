@@ -2,7 +2,7 @@
 
 Here I show my indroduction and the entertainment works from the master what I highly recommended.
 
-please go to [lastneveral.github.io](lastneveral.github.io) to see.
+please go to https://lastneveral.github.io/ to see.
 
 ![Alt text](assets/img/effect0.jpg)
 
