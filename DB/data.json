@@ -1,0 +1,134 @@
+{
+    "Game": [
+        {
+            "id": 1,
+            "title": "黑神话：悟空",
+            "description": "若一去不回，便一去不回",
+            "video_url": "./DB/Game/wukong.MP4",
+            "link_url": "https://www.heishenhua.com/"
+        },
+        {
+            "id": 2,
+            "title": "SEKIRO: Shadows Die Twice",
+            "description": "",
+            "video_url": "./DB/Game/SEKIRO.mp4",
+            "link_url": "https://www.sekirothegame.com/"
+        },
+        {
+            "id": 3,
+            "title": "Detroit: Become Human",
+            "description": "",
+            "video_url": "./DB/Game/Detroit.MP4",
+            "link_url": "https://www.quanticdream.com/en/detroit-become-human"
+        },
+        {
+            "id": 4,
+            "title": "Stardew Valley",
+            "description": "",
+            "video_url": "./DB/Game/Stardew_Valley.mp4",
+            "link_url": "https://www.stardewvalley.net/"
+        },
+        {
+            "id": 5,
+            "title": "Ori and the Blind Forest",
+            "description": "",
+            "video_url": "./DB/Game/Ori.mp4",
+            "link_url": "https://www.orithegame.com/moon-studios/"
+        },
+        {
+            "id": 6,
+            "title": "マリオカート8",
+            "description": "JUST SPEED UP WITHOUT MIND",
+            "video_url": "./DB/Game/mache.mp4",
+            "link_url": "https://mariokart8.nintendo.com/"
+        }
+    ],
+    "Ani": [
+        {
+            "id": 1,
+            "title": "パプリカ",
+            "description": "「ここは夢よ。だけど、現実と何が違うの？」",
+            "video_url": "./DB/Ani/Red_Pipes.mp4",
+            "link_url": "https://www.imdb.com/title/tt0851578"
+        },
+        {
+            "id": 2,
+            "title": "中国奇谭",
+            "description": "现在大王给我派了很多事情，每天做都做不完",
+            "video_url": "./DB/Ani/zhongguoqitan.mp4",
+            "link_url": "https://www.imdb.com/title/tt26007176"
+        },
+        {
+            "id": 3,
+            "title": "「青春ブタ野郎」シリーズ",
+            "description": "「私、思っているより君のこと好きみたい。」",
+            "video_url": "./DB/Ani/mayi.mp4",
+            "link_url": "https://zh.moegirl.org.cn/%E9%9D%92%E6%98%A5%E7%8C%AA%E5%A4%B4%E5%B0%91%E5%B9%B4%E7%B3%BB%E5%88%97"
+        },
+        {
+            "id": 4,
+            "title": "Cyberpunk: Edgerrunners",
+            "description": "TO THE MOON",
+            "video_url": "./DB/Ani/Edgerrunners.mp4",
+            "link_url": "https://www.imdb.com/title/tt12590266"
+        },
+        {
+            "id": 5,
+            "title": "進撃の巨人",
+            "description": "「向こうにいるのは、敵だ。」",
+            "video_url": "./DB/Ani/jvren.mp4",
+            "link_url": "https://www.imdb.com/title/tt2560140"
+        },
+        {
+            "id": 6,
+            "title": "モブサイコ100",
+            "description": "「お前はもう、十分すごいよ。だから、無理するな。」",
+            "video_url": "./DB/Ani/mob.mp4",
+            "link_url": "https://www.imdb.com/title/tt5897304"
+        },
+        {
+            "id": 7,
+            "title": "言の葉の庭",
+            "description": "鸣神の 少しとよみて 降らずとも 我は止まらん 妹し留めば",
+            "video_url": "./DB/Ani/yanye.mp4",
+            "link_url": "https://www.imdb.com/title/tt2591814"
+        }
+    ],
+    "Movie": [
+        {
+            "id": 1,
+            "title": "DEAD POETS SOCIETY",
+            "description": "O Captain! My Captain!",
+            "video_url": "./DB/Movie/Dead_Poets_Society.mp4",
+            "link_url": "https://www.imdb.com/title/tt0097165/"
+        },
+        {
+            "id": 2,
+            "title": "Interstellar",
+            "description": "best.",
+            "video_url": "./DB/Movie/Interstellar.mp4",
+            "link_url": "https://www.imdb.com/title/tt0816692"
+        },
+        {
+            "id": 3,
+            "title": "鬼子来了",
+            "description": "大哥大嫂过年好啊！你是我的爷！我是你的儿！",
+            "video_url": "./DB/Movie/guizi.mp4",
+            "link_url": "https://www.imdb.com/title/tt0245929"
+        },
+        {
+            "id": 4,
+            "title": "Ladri di biciclette",
+            "description": "best.",
+            "video_url": "./DB/Movie/Ladri_di_biciclette.mp4",
+            "link_url": "https://www.imdb.com/title/tt0040522"
+        },
+        {
+            "id": 5,
+            "title": "Love Letter",
+            "description": "I love you, just wish you knew,These quiet dreams are all for you.",
+            "video_url": "./DB/Movie/Love_Letter.mp4",
+            "link_url": "https://www.imdb.com/title/tt0113703"
+        }
+    ]
+}
