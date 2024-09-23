@@ -10,14 +10,14 @@
         {
             "id": 2,
             "title": "SEKIRO: Shadows Die Twice",
-            "description": "",
+            "description": "「迷えば、敗れる。」",
             "video_url": "./DB/Game/SEKIRO.mp4",
             "link_url": "https://www.sekirothegame.com/"
         },
         {
             "id": 3,
             "title": "Detroit: Become Human",
-            "description": "",
+            "description": "rA9",
             "video_url": "./DB/Game/Detroit.MP4",
             "link_url": "https://www.quanticdream.com/en/detroit-become-human"
         },
@@ -31,7 +31,7 @@
         {
             "id": 5,
             "title": "Ori and the Blind Forest",
-            "description": "",
+            "description": "A beautifully emotional journey of hope, sacrifice, and the search for family.",
             "video_url": "./DB/Game/Ori.mp4",
             "link_url": "https://www.orithegame.com/moon-studios/"
         },
@@ -119,14 +119,14 @@
         {
             "id": 4,
             "title": "Ladri di biciclette",
-            "description": "best.",
+            "description": "WHO STEALS PEOPLE'S BICYCLES?",
             "video_url": "./DB/Movie/Ladri_di_biciclette.mp4",
             "link_url": "https://www.imdb.com/title/tt0040522"
         },
         {
             "id": 5,
             "title": "Love Letter",
-            "description": "I love you, just wish you knew,These quiet dreams are all for you.",
+            "description": "I love you, just wish you knew, These quiet dreams are all for you.",
             "video_url": "./DB/Movie/Love_Letter.mp4",
             "link_url": "https://www.imdb.com/title/tt0113703"
         }
