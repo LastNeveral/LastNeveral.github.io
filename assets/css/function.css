@@ -11,6 +11,8 @@
     font-size: var(--h1-font-size);
     color: var(--title-color);
     transition: transform 0.5s;
+
+    text-align: center;
 }
 
 .ATTENTION:hover {
