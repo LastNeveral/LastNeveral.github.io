@@ -4,7 +4,7 @@
             "id": 1,
             "title": "黑神话：悟空",
             "description": "若一去不回，便一去不回",
-            "video_url": "./DB/Game/wukong.MP4",
+            "video_url": "./DB/Game/wukong.mp4",
             "link_url": "https://www.heishenhua.com/"
         },
         {
@@ -18,29 +18,15 @@
             "id": 3,
             "title": "Detroit: Become Human",
             "description": "rA9",
-            "video_url": "./DB/Game/Detroit.MP4",
+            "video_url": "./DB/Game/Detroit.mp4",
             "link_url": "https://www.quanticdream.com/en/detroit-become-human"
         },
         {
             "id": 4,
-            "title": "Stardew Valley",
-            "description": "",
-            "video_url": "./DB/Game/Stardew_Valley.mp4",
-            "link_url": "https://www.stardewvalley.net/"
-        },
-        {
-            "id": 5,
             "title": "Ori and the Blind Forest",
             "description": "A beautifully emotional journey of hope, sacrifice, and the search for family.",
             "video_url": "./DB/Game/Ori.mp4",
             "link_url": "https://www.orithegame.com/moon-studios/"
-        },
-        {
-            "id": 6,
-            "title": "マリオカート8",
-            "description": "JUST SPEED UP WITHOUT MIND",
-            "video_url": "./DB/Game/mache.mp4",
-            "link_url": "https://mariokart8.nintendo.com/"
         }
     ],
     "Ani": [
