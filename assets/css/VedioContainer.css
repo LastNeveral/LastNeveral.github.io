@@ -22,7 +22,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: var(--title-color);
     text-align: center;
     z-index: 1;
 
@@ -146,4 +146,36 @@
 .right_change:hover::before {
     opacity: 1;
     right: 30%;
+}
+
+.detail {
+    position: absolute;
+    right: 6%;
+    bottom: 4%;
+
+    color: var(--title-color);
+    opacity: 0.4;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline var(--title-color) 1px;
+    transition: opacity 1s;
+}
+
+.detail.active {
+    animation: leftin 4s ease-in;
+}
+
+@keyframes leftin {
+    0% {
+        transform: translate(10%, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.4;
+    }
+}
+
+.detail:hover {
+    opacity: 1;
 }

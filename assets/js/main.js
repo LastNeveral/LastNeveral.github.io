@@ -127,13 +127,21 @@ window.addEventListener('scroll', scrollUp)
 
 document.addEventListener('scroll', function () {
   const overlayTexts = document.querySelectorAll('.overlay-text');
-
+  const details = document.querySelectorAll('.detail');
   overlayTexts.forEach(overlayText => {
-    const rect = overlayText.getBoundingClientRect();
+    const overlayText_rect = overlayText.getBoundingClientRect();
 
     // 检查每个元素是否进入视口
-    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+    if (overlayText_rect.top <= window.innerHeight && overlayText_rect.bottom >= 0) {
       overlayText.classList.add('active');
+    }
+  });
+  details.forEach(detail => {
+    const detail_rect = detail.getBoundingClientRect();
+
+    // 检查每个元素是否进入视口
+    if (detail_rect.top <= window.innerHeight && detail_rect.bottom >= 0) {
+      detail.classList.add('active');
     }
   });
 });
