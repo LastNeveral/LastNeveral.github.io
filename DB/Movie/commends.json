@@ -1,0 +1,75 @@
+{
+    "src": "/DB/Movie/",
+    "Movie": [
+        {
+            "title": "DEAD POETS SOCIETY",
+            "description": "O Captain! My Captain!",
+            "commend": "一部因为名字而差点错过的经典之作，个人心目中的最佳电影之一。 死亡诗社这个名字让我最初认为大概是一部欧洲剧院的恐怖故事，而我的胆子常常是很小的，自然而然的就跳过了。直到某次看到那个最知名的片段“O caption, my caption”，每个演员的不同演绎让我意识到这跟我最初所想的绝不相关。结果也确是如此，当走进这部电影，才发现它传达的却是对自由、创造力和个人表达的深刻探讨。但这种探讨在现世种何尝不是另一种形式上的恐怖故事呢，即使如此，我的心中也将撕去那权威的一页，高呼不自由，毋宁死。"
+        },
+        {
+            "title": "Interstellar",
+            "description": "best.",
+            "commend": "111"
+        },
+        {
+            "title": "鬼子来了",
+            "description": "大哥大嫂过年好啊！你是我的爷！我是你的儿！",
+            "commend": ""
+        },
+        {
+            "title": "Ladri di biciclette",
+            "description": "WHO STEALS PEOPLE'S BICYCLES?",
+            "commend": ""
+        },
+        {
+            "title": "Love Letter",
+            "description": "",
+            "commend": ""
+        },
+        {
+            "title": "Taxi Driver",
+            "description": "",
+            "commend": ""
+        },
+        {
+            "title": "Der Untergang",
+            "description": "",
+            "commend": ""
+        },
+        {
+            "title": "白い巨塔",
+            "description": "",
+            "commend": ""
+        },
+        {
+            "title": "无间道",
+            "description": "",
+            "commend": ""
+        },
+        {
+            "title": "大明王朝",
+            "description": "",
+            "commend": ""
+        },
+        {
+            "title": "钢的琴",
+            "description": "",
+            "commend": ""
+        },
+        {
+            "title": "살인의 추억",
+            "description": "",
+            "commend": ""
+        },
+        {
+            "title": "Whiplash",
+            "description": "",
+            "commend": ""
+        },
+        {
+            "title": "La La Land",
+            "description": "",
+            "commend": ""
+        }
+    ]
+}

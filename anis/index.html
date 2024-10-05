@@ -21,56 +21,53 @@
     <header class="header scroll-header" id="header">
         <nav class="nav container">
             <a href="../" class="nav__logo">Haoao</a>
-            <i class="uil uil-times nav__close" id="nav-close"></i>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="../" class="nav__link">
+                            <i class="uil uil-estate nav__icon"></i>
+                            <p i18n="home">Main</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../movies/" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>
+                            <p i18n="Movie">Movie</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../games/" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i>
+                            <p i18n="Game">Game</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../anis/" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>
+                            <p i18n="Ani">Ani </p>
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
-
+            <div class="nav__btns">
+                <!-- <i class="uil uil-moon change-theme" id="theme-button"></i> -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
         </nav>
     </header>
+
     <main class="main-function">
         <div class="ATTENTION">
             <h1>WAITING FOR IT</h1>
         </div>
     </main>
 
-
     <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h1 class="footer__title">Mr.Liu</h1>
-                    <span class="footer__subtitle" i18n="home__subtitle">Sakurajima Mai Fans</span>
-                </div>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="../" class="footer__link" i18n="portfolio">Home</a>
-                    </li>
-                    <li>
-                        <a href="../movies/" class="footer__link" i18n="portfolio">Movies</a>
-                    </li>
-                    <li>
-                        <a href="../games/" class="footer__link" i18n="contact">Games</a>
-                    </li>
-                    <li>
-                        <a href="../anis/" class="footer__link" i18n="contact">Anis</a>
-                    </li>
-                </ul>
-
-                <div class="footer__socials">
-                    <a href="http://github.com" target="_blank">
-                        <svg class="icon footer__social" aria-hidden="true">
-                            <use xlink:href="#icon-github"></use>
-                        </svg>
-                    </a>
-                    <a href="https://space.bilibili.com/399575549" target="_blank">
-                        <svg class="icon footer__social" aria-hidden="true">
-                            <use xlink:href="#icon-bilibili-line"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <p class="footer__copy">
+        <div class="footer_coment__bg">
+            <p class="footer_coment__copy">
                 Haoao &#169; 2024
             </p>
         </div>
@@ -86,7 +83,7 @@
 
     <!-- nav-hidden JS -->
     <script src="../assets/js/nav-hidden.js"></script>
-    ../
+
     <!-- changed JS -->
     <script src="../assets/js/change.js"></script>
 

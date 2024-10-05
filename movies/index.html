@@ -12,7 +12,6 @@
 
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="../assets/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/VedioContainer.css" />
     <link rel="stylesheet" href="../assets/css/function.css" />
     <title>Movie-haoao</title>
 </head>
@@ -21,60 +20,89 @@
     <header class="header scroll-header" id="header">
         <nav class="nav container">
             <a href="../" class="nav__logo">Haoao</a>
-            <i class="uil uil-times nav__close" id="nav-close"></i>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="../" class="nav__link">
+                            <i class="uil uil-estate nav__icon"></i>
+                            <p i18n="home">Main</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../movies/" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>
+                            <p i18n="Movie">Movie</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../games/" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i>
+                            <p i18n="Game">Game</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../anis/" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>
+                            <p i18n="Ani">Ani </p>
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
-
+            <div class="nav__btns">
+                <!-- <i class="uil uil-moon change-theme" id="theme-button"></i> -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
         </nav>
     </header>
+
     <main class="main-function">
-        <div class="ATTENTION">
-            <h1>WAITING FOR IT</h1>
+        <div class="reel-container">
+            <div class="change left_change"></div>
+            <div class="reel">
+            </div>
+            <div class="change right_change"></div>
+        </div>
+
+        <div class="overlay">
+            <div class="describe">
+                <div class="row">
+                    <div class="updates-back">
+                        <svg arial-label="back chevron" xmlns="http://www.w3.org/2000/svg" width="6.27" height="10.154"
+                            viewBox="0 0 6.27 10.154">
+                            <path d="M8.59,14.711l3.876-3.884L8.59,6.943,9.783,5.75l5.077,5.077L9.783,15.9Z"
+                                transform="translate(14.86 15.904) rotate(180)" fill="#fff"></path>
+                        </svg>
+                        <span>Back to</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="info">
+                        <h1>DEAD POETS SOCIETY</h1>
+                    </div>
+                    <div class="Commends">
+                        <div class="flexcontent">
+                            <p>一部因为名字而差点错过的经典之作，个人心目中的最佳电影之一。
+                                死亡诗社这个名字让我最初认为大概是一部欧洲剧院的恐怖故事，而我的胆子常常是很小的，自然而然的就跳过了。直到某次看到那个最知名的片段“O caption,
+                                my
+                                caption”，每个演员的不同演绎让我意识到这跟我最初所想的绝不相关。结果也确是如此，当走进这部电影，才发现它传达的却是对自由、创造力和个人表达的深刻探讨。但这种探讨在现世种何尝不是另一种形式上的恐怖故事呢，即使如此，我的心中也将撕去那权威的一页，高呼不自由，毋宁死。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
 
     <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h1 class="footer__title">Mr.Liu</h1>
-                    <span class="footer__subtitle" i18n="home__subtitle">Sakurajima Mai Fans</span>
-                </div>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="../" class="footer__link" i18n="portfolio">Home</a>
-                    </li>
-                    <li>
-                        <a href="../movies/" class="footer__link" i18n="portfolio">Movies</a>
-                    </li>
-                    <li>
-                        <a href="../games/" class="footer__link" i18n="contact">Games</a>
-                    </li>
-                    <li>
-                        <a href="../anis/" class="footer__link" i18n="contact">Anis</a>
-                    </li>
-                </ul>
-
-                <div class="footer__socials">
-                    <a href="http://github.com" target="_blank">
-                        <svg class="icon footer__social" aria-hidden="true">
-                            <use xlink:href="#icon-github"></use>
-                        </svg>
-                    </a>
-                    <a href="https://space.bilibili.com/399575549" target="_blank">
-                        <svg class="icon footer__social" aria-hidden="true">
-                            <use xlink:href="#icon-bilibili-line"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <p class="footer__copy">
+        <div class="footer_coment__bg">
+            <p class="footer_coment__copy">
                 Haoao &#169; 2024
             </p>
         </div>
-
     </footer>
     <!--==================== SWIPER JS ====================-->
     <script src="../assets/js/swiper-bundle.min.js"></script>
@@ -87,10 +115,8 @@
 
     <!-- nav-hidden JS -->
     <script src="../assets/js/nav-hidden.js"></script>
-    ../
-    <!-- changed JS -->
-    <script src="../assets/js/change.js"></script>
 
+    <script src="../assets/js/reel.js"></script>
     <!--==================== MAIN JS ====================-->
     <script src="../assets/js/main.js"></script>
 

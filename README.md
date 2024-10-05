@@ -13,9 +13,10 @@ please go to https://lastneveral.github.io/ to see.
 - [x] re-create home page struct
 - [x] complete the selection of basic materials
 - [x] create JSON files to complete the random switching function
-- [ ] responsive adaptation, especially page reconstruction for small screens
+- [x] responsive adaptation, especially page reconstruction for small screens
 #### Function pages
-- [ ] establish function page
+- [x] establish function page layout
+- [ ] responsive adaptation
 - [ ] finish all the commends
 
 #### Aditional

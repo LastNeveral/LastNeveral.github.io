@@ -5,8 +5,20 @@
     overflow: hidden;
 }
 
+/* 初始状态，视频透明度为 1 */
+.video-container video {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+}
+
+/* 淡出状态，视频透明度为 0 */
+.video-container .fadeout {
+    opacity: 0;
+}
+
 .background-video {
     position: absolute;
+    object-fit: cover;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -97,6 +109,8 @@
 
 .change:hover {
     background-color: rgba(var(--body-color), 0.9);
+
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
 

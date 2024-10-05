@@ -24,7 +24,6 @@ const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction() {
   const navMenu = document.getElementById('nav-menu')
-  // 点击每个菜单链接后收起菜单栏
   navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
@@ -89,27 +88,6 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
   keyboard: true, */
 });
 
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive() {
-  const scrollY = window.pageYOffset
-
-  sections.forEach(current => {
-    const sectionHeight = current.offsetHeight
-    const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute('id')
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-    } else {
-      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-    }
-  })
-}
-window.addEventListener('scroll', scrollActive)
-
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {
   const nav = document.getElementById('header')
@@ -117,57 +95,17 @@ function scrollHeader() {
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*==================== SHOW SCROLL UP ====================*/
-function scrollUp() {
-  const scrollUp = document.getElementById('scroll-up');
-  if (this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
 
-
-document.addEventListener('scroll', function () {
-  const overlayTexts = document.querySelectorAll('.overlay-text');
-  const details = document.querySelectorAll('.detail');
-  overlayTexts.forEach(overlayText => {
-    const overlayText_rect = overlayText.getBoundingClientRect();
-
-    // 检查每个元素是否进入视口
-    if (overlayText_rect.top <= window.innerHeight && overlayText_rect.bottom >= 0) {
-      overlayText.classList.add('active');
-    }
-  });
-  details.forEach(detail => {
-    const detail_rect = detail.getBoundingClientRect();
-
-    // 检查每个元素是否进入视口
-    if (detail_rect.top <= window.innerHeight && detail_rect.bottom >= 0) {
-      detail.classList.add('active');
-    }
-  });
-});
-
-
+/*==================== SHOW IMAGE FADE IN ====================*/
 document.addEventListener('DOMContentLoaded', function () {
-  const videos = document.querySelectorAll('.background-video'); // 选择所有视频
-  const viewportHeight = window.innerHeight;
-
-  // 创建IntersectionObserver回调函数
-  const videoObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const video = entry.target; // 当前的目标视频
-
-      // 检查是否超过一半进入视口
-      if (entry.intersectionRect.height > viewportHeight / 2) {
-        video.play();  // 超过一半播放
-      } else {
-        video.pause(); // 否则暂停
-      }
-    });
-  }, {
-    threshold: [0, 0.2, 0.4, 0.6, 0.8, 1] // 设置为0.5表示观察当视频有一半进入视口时
-  });
-  // 开始观察所有视频元素
-  videos.forEach(video => {
-    videoObserver.observe(video);
-  });
+  const fadeinImg = document.querySelector('.fadein-image');
+  if (fadeinImg) {
+    if (fadeinImg.complete) {
+      fadeinImg.classList.add('loaded');
+    } else {
+      fadeinImg.onload = () => {
+        fadeinImg.classList.add('loaded');
+      };
+    }
+  }
 });
