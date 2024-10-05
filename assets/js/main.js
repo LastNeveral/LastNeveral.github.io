@@ -99,6 +99,7 @@ window.addEventListener('scroll', scrollHeader)
 /*==================== SHOW IMAGE FADE IN ====================*/
 document.addEventListener('DOMContentLoaded', function () {
   const fadeinImg = document.querySelector('.fadein-image');
+  fadeinImg.style.height = fadeinImg.parentElement.offsetHeight;
   if (fadeinImg) {
     if (fadeinImg.complete) {
       fadeinImg.classList.add('loaded');
