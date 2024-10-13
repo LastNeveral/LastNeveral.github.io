@@ -69,6 +69,31 @@ document.addEventListener('DOMContentLoaded', function () {
                 slideItems('left');
             });
 
+            let startX = 0;
+
+            container.addEventListener('touchstart', function (event) {
+                const touch = event.targetTouches[0];
+                startX = touch.pageX;
+                console.log(container.offsetLeft);
+            }, false);
+            container.addEventListener('touchmove', function (event) {
+                const touch = event.targetTouches[0];
+                let endX = touch.pageX;
+                let deltaX = endX - startX;
+                let newleft = (container.offsetLeft - 50 + deltaX);
+                if (newleft > 0) {
+                    newleft = 0;
+                }
+                if (newleft < document.body.clientWidth - container.offsetWidth - 100) {
+                    newleft = document.body.clientWidth - container.offsetWidth - 100;
+                }
+                container.style.left = newleft + "px";
+                console.log(container.offsetLeft);
+                console.log(deltaX);
+                console.log(newleft);
+                startX = endX;
+            }, false);
+
             // item overlay
             function showOverlay(movie) {
                 const overlay = document.querySelector('.overlay');
