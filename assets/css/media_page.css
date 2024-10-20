@@ -12,10 +12,10 @@
 
 .reel-container {
     width: calc(100%);
-    padding: 30px 50px;
+    padding: 2vh 50px;
     padding-top: calc(var(--header-height) + 1.5rem + 20px);
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
 }
 
 .reel {
@@ -29,17 +29,63 @@
     left: 0px;
 }
 
+.hidden {
+    display: none
+}
+
+@media screen and (max-width: 568px) {
+    .change {
+        display: none
+    }
+
+    .reel-container {
+        overflow-x: scroll;
+        overflow-y: visible;
+        padding-left: 30px;
+    }
+
+    .Commends p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 568px) {
+    .info h1 {
+        font-size: 60px;
+    }
+
+    .Commends p {
+        font-size: 24px;
+    }
+
+    /* .item {
+        width: 80px
+    } */
+
+    .item:hover {
+        scale: 1.04;
+    }
+
+
+}
+
+
 .item {
     position: relative;
-    width: 200px;
+    width: 160px;
     height: 80vh;
     align-items: center;
     /* box-shadow: 0px 1px 4px rgba(80, 80, 80, 0.6); */
-    transition: transform 0.5s;
+
+    opacity: 0;
+    transform: translateY(20vh);
+    transition: opacity 0.5s ease, transform 0.5s ease, scale 0.5s ease;
 }
 
-.item:hover {
-    transform: scale(1.08);
+
+.item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .item img {
@@ -173,8 +219,9 @@
 }
 
 .Commends {
-    font-family: "Open Sans", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", "Hiragino Sans GB", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: "plantc", "Source Han Serif", serif;
 }
+
 
 
 
@@ -212,28 +259,47 @@
     top: 50%;
     transform: translateY(-50%);
     opacity: 1;
-    transition: all 0.3s ease;
+    animation: rightMoveAnimation .5s forwards;
 }
 
 .left_change::before {
     content: '\276E';
     left: 50%;
-    /* 左箭头 */
+    animation: leftMoveAnimation 2s infinite ease-in-out;
 }
 
 .right_change::before {
     content: '\276F';
     right: 50%;
-    /* 右箭头 */
+    animation: rightMoveAnimation 2s infinite ease-in-out;
 }
 
-/* 当鼠标悬停时，箭头透明度变为 1 */
-.left_change:hover::before {
-    left: 30%;
+@keyframes leftMoveAnimation {
+    0% {
+        left: 50%;
+    }
+
+    50% {
+        left: 30%;
+    }
+
+    100% {
+        left: 50%;
+    }
 }
 
-.right_change:hover::before {
-    right: 30%;
+@keyframes rightMoveAnimation {
+    0% {
+        right: 50%;
+    }
+
+    50% {
+        right: 30%;
+    }
+
+    100% {
+        right: 50%;
+    }
 }
 
 

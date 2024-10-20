@@ -174,7 +174,7 @@
     transition: opacity 1s;
 }
 
-.detail.active {
+.detail .active {
     animation: leftin 4s ease-in;
 }
 

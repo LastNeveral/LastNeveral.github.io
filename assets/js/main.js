@@ -96,17 +96,12 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader)
 
 
-/*==================== SHOW IMAGE FADE IN ====================*/
+
+
+/*==================== MAIN DATA FLOAT UP ====================*/
 document.addEventListener('DOMContentLoaded', function () {
-  const fadeinImg = document.querySelector('.fadein-image');
-  fadeinImg.style.height = fadeinImg.parentElement.offsetHeight;
-  if (fadeinImg) {
-    if (fadeinImg.complete) {
-      fadeinImg.classList.add('loaded');
-    } else {
-      fadeinImg.onload = () => {
-        fadeinImg.classList.add('loaded');
-      };
-    }
+  const homeData = document.querySelector('.home__data');
+  if (homeData) {
+    homeData.classList.add('active');
   }
-});
+})

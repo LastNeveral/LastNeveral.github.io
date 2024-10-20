@@ -1,20 +1,33 @@
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-    let currentContentId = { Ani: 1, Game: 1, Movie: 1 }; // 存储当前内容 ID 的对象
     fetch('./DB/data.json')
         .then(response => response.json())
         .then(data => {
             const contents = data;
             const rootpath = contents.src;
+            let sectionIds = ['Ani', 'Game', 'Movie'];
+            let currentContentId = {};
+            for (let i = 0; i < sectionIds.length; i++) {
+                let sectionId = sectionIds[i];
+                currentContentId[sectionId] = getRandomInt(1, contents[sectionId].length);
+                loadContent(sectionId, currentContentId[sectionId], 0);
+            }
+
             document.querySelectorAll('.left_change, .right_change').forEach(button => {
                 button.addEventListener('click', function () {
                     const sectionId = button.parentNode.parentNode.id;
                     const direction = button.classList.contains('left_change') ? -1 : 1;
 
                     currentContentId[sectionId] = (currentContentId[sectionId] + direction + contents[sectionId].length - 1) % contents[sectionId].length + 1;
-                    loadContent(sectionId, currentContentId[sectionId]);
+                    loadContent(sectionId, currentContentId[sectionId], 1);
                 });
             });
-            function loadContent(sectionId, contentId) {
+            function loadContent(sectionId, contentId, isplay) {
                 const content = contents[sectionId].find(item => item.id === contentId);
                 const section = document.getElementById(sectionId);
                 const path = "." + rootpath + sectionId + "/";
@@ -27,14 +40,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     section.querySelector('.overlay-text p').textContent = content.description;
                     video.poster = path + content.title + ".jpg";
                     section.querySelector('video source').src = path + content.title + ".mp4";
+                    section.querySelector('.overlay-text a').href = content.link_url;
                     video.load();
                     video.classList.remove('fadeout');
-                    video.play().catch((error) => {
-                        console.error('Error playing video:', error);
-                    });
+                    if (isplay) {
+                        video.play().catch((error) => {
+                            console.error('Error playing video:', error);
+                        });
+                    }
                     video.removeEventListener('transitionend', arguments.callee);
                 }, { once: true });
-                section.querySelector('.overlay-text a').href = content.link_url;
             }
         });
 });
@@ -45,7 +60,6 @@ function scrollUp() {
     if (this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
-
 
 document.addEventListener('scroll', function () {
     const overlayTexts = document.querySelectorAll('.overlay-text');
@@ -89,4 +103,20 @@ document.addEventListener('DOMContentLoaded', function () {
             videoObserver.observe(video);
         }
     });
+});
+
+
+/*==================== SHOW IMAGE FADE IN ====================*/
+document.addEventListener('DOMContentLoaded', function () {
+    const fadeinImg = document.querySelector('.fadein-image');
+    fadeinImg.style.height = fadeinImg.parentElement.offsetHeight;
+    if (fadeinImg) {
+        if (fadeinImg.complete) {
+            fadeinImg.classList.add('loaded');
+        } else {
+            fadeinImg.onload = () => {
+                fadeinImg.classList.add('loaded');
+            };
+        }
+    }
 });

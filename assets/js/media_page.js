@@ -4,9 +4,19 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             const container = document.querySelector('.reel');
             let currentIndex = 0; // 当前显示的图片索引
-            const itemsPerPage = 10; // 每页显示的图片数量
             const totalItems = data.Movie.length; // 总图片数量
             const path = ".." + data.src;
+            let itemWidth;
+            if (document.body.clientWidth > 568) {
+                itemWidth = 160;
+            }
+            else {
+                itemWidth = 110;
+            }
+            const itemgap = 6;
+            const totalWidth = totalItems * itemWidth + itemgap * (totalItems - 1);
+            container.style.width = `${totalWidth}px`;
+            container.style.left = 0;
 
             function createItem(movie) {
                 const item = document.createElement('div');
@@ -15,8 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 title.textContent = movie.title;
                 item.appendChild(title);
                 const img = document.createElement('img');
-                img.src = path + movie.title + ".jpg"; // 假设 video_url 是图片地址
+                img.src = path + movie.title + ".jpg"; // 
                 item.appendChild(img);
+                item.style.width = itemWidth;
 
                 item.addEventListener('click', function () {
                     showOverlay(movie);
@@ -28,29 +39,31 @@ document.addEventListener('DOMContentLoaded', function () {
                 for (let i = startIndex; i < totalItems; i++) {
                     const item = createItem(data.Movie[i]);
                     container.appendChild(item);
+                    setTimeout(() => {
+                        item.classList.add('visible');
+                    }, i * 50); // 每个 item 延迟 100ms
                 }
-                container.style.width = "calc(10 * 200px + 9 * 10px)";
-                container.style.left = "0px"
+
             }
 
-            function slideItems(direction) {
+            function slideItems(direction, btn) {
                 const oldLeftValue = container.style.left;
                 let newLeftValue;
                 let width = parseInt(container.style.width.match(/\d+/)[0], 10);
+
                 let liftWidth = document.body.clientWidth - 100;
                 if (direction === 'right') {
                     newLeftValue = parseInt(oldLeftValue, 10) - liftWidth;
                     if ((document.body.clientWidth - newLeftValue - 100) > width) {
-
                         newLeftValue = document.body.clientWidth - width - 100;
+                        btn.classList.add('hidden')
                     }
-                    console.log((document.body.clientWidth - newLeftValue));
-                    console.log((container.style.width));
                 } else if (direction === 'left') {
 
                     newLeftValue = parseInt(oldLeftValue, 10) + liftWidth;
                     if (newLeftValue > 0) {
                         newLeftValue = 0;
+                        btn.classList.add('hidden')
                     }
                 }
                 container.style.left = newLeftValue + "px";
@@ -60,39 +73,40 @@ document.addEventListener('DOMContentLoaded', function () {
             displayItems(currentIndex); // load items
 
             const rightChangeBtn = document.querySelector('.right_change');
-            rightChangeBtn.addEventListener('click', function () {
-                slideItems('right');
-            });
-
             const leftChangeBtn = document.querySelector('.left_change');
+            rightChangeBtn.addEventListener('click', function () {
+                slideItems('right', rightChangeBtn);
+                leftChangeBtn.classList.remove('hidden');
+            });
             leftChangeBtn.addEventListener('click', function () {
-                slideItems('left');
+                slideItems('left', leftChangeBtn);
+                rightChangeBtn.classList.remove('hidden');
             });
 
-            let startX = 0;
+            // let startX = 0;
 
-            container.addEventListener('touchstart', function (event) {
-                const touch = event.targetTouches[0];
-                startX = touch.pageX;
-                console.log(container.offsetLeft);
-            }, false);
-            container.addEventListener('touchmove', function (event) {
-                const touch = event.targetTouches[0];
-                let endX = touch.pageX;
-                let deltaX = endX - startX;
-                let newleft = (container.offsetLeft - 50 + deltaX);
-                if (newleft > 0) {
-                    newleft = 0;
-                }
-                if (newleft < document.body.clientWidth - container.offsetWidth - 100) {
-                    newleft = document.body.clientWidth - container.offsetWidth - 100;
-                }
-                container.style.left = newleft + "px";
-                console.log(container.offsetLeft);
-                console.log(deltaX);
-                console.log(newleft);
-                startX = endX;
-            }, false);
+            // container.addEventListener('touchstart', function (event) {
+            //     const touch = event.targetTouches[0];
+            //     startX = touch.pageX;
+            //     console.log(container.offsetLeft);
+            // }, false);
+            // container.addEventListener('touchmove', function (event) {
+            //     const touch = event.targetTouches[0];
+            //     let endX = touch.pageX;
+            //     let deltaX = endX - startX;
+            //     let newleft = (container.offsetLeft - 50 + deltaX);
+            //     if (newleft > 0) {
+            //         newleft = 0;
+            //     }
+            //     if (newleft < document.body.clientWidth - container.offsetWidth - 100) {
+            //         newleft = document.body.clientWidth - container.offsetWidth - 100;
+            //     }
+            //     container.style.left = newleft + "px";
+            //     console.log(container.offsetLeft);
+            //     console.log(deltaX);
+            //     console.log(newleft);
+            //     startX = endX;
+            // }, false);
 
             // item overlay
             function showOverlay(movie) {
