@@ -1,75 +1,160 @@
 {
-    "src": "/DB/Movie/",
+    "src": "/DB/Media/",
     "Movie": [
         {
+            "id": 1,
             "title": "DEAD POETS SOCIETY",
             "description": "O Captain! My Captain!",
             "commend": "一部因为名字而差点错过的经典之作，个人心目中的最佳电影之一。 死亡诗社这个名字让我最初认为大概是一部欧洲剧院的恐怖故事，而我的胆子常常是很小的，自然而然的就跳过了。直到某次看到那个最知名的片段“O caption, my caption”，每个演员的不同演绎让我意识到这跟我最初所想的绝不相关。结果也确是如此，当走进这部电影，才发现它传达的却是对自由、创造力和个人表达的深刻探讨。但这种探讨在现世种何尝不是另一种形式上的恐怖故事呢，即使如此，我的心中也将撕去那权威的一页，高呼不自由，毋宁死。"
         },
         {
+            "id": 2,
             "title": "Interstellar",
             "description": "best.",
             "commend": "很难用言语去表达我第一次看完星际穿越之后的心情，但完全可以确定的是，我那时候的心是汹涌的沉醉的，再仰望星空之时感觉自己全部的身躯、灵魂都会被碾成了一厘一毫被吞没入深邃的黑暗，之后它也成为了我每年至少回顾一遍的电影。我相信，每一位热爱理工科的学生在看过星际穿越后都会回忆起自己热爱的起点并看到我们将要通往的终点。而对我而言，所有的惊奇幻想传说真理也正如星际穿越中一样，落脚点是爱。只可惜可叹，我大概此生无望。"
         },
         {
+            "id": 3,
             "title": "鬼子来了",
             "description": "大哥大嫂过年好啊！你是我的爷！我是你的儿！",
             "commend": "在半泽直树中总是觉得香川照之在哪见过，没错是哪个经典的贺岁片段，只记得小时候第一次看要笑岔气了，只以为是一个喜剧片。后来还是怀着愉悦的心情在一个下午下载了鬼子的原片，从头到脚认认真真看完了一部近似全部黑白的电影，它完全颠覆了我对中国战争题材电影的认知，也确实让我对抗日战争、对人性多了些思考；在父亲、爷爷辈那里也了解一些过去的他们眼中的历史。结论同样是与电影一致的，在不同地域、不同阶级的眼中这场战争并不是完完全全一样的，即使是一样的国仇家恨、血雨纷飞，立场不同、思维程度不同，看到的东西自然也不一样，这样的道理本就该懂，那我又多明白了什么呢。"
         },
         {
+            "id": 4,
             "title": "Ladri di biciclette",
             "description": "WHO STEALS PEOPLE'S BICYCLES?",
             "commend": "社会吃人"
         },
         {
+            "id": 0,
             "title": "Love Letter",
             "description": "",
             "commend": "情书经常被归类为一部爱情电影，它在讲爱情吗，好像是的，藤井树的暗恋，渡边博子对恋人的难以忘怀，秋叶茂的包容与陪伴，这些都是刻骨铭心的爱情。但情书只是在讲爱情吗？我从电影中也看到了逝去与怀念，博子在失去未婚夫藤井树后，陷入对过去的追溯；藤井树在收到书信之后开始慢慢了解到了记忆中不一样的过去，发现那个自己记忆中他对她的那份默默无言的情感。我确是钟爱此类电影，与生命中重要的人不得不成为过客，当我回望过去，是否能躺在心中的那片雪地，轻轻呢喃，你好吗"
         },
         {
+            "id": 5,
             "title": "Taxi Driver",
             "description": "",
             "commend": "所以呢，出租车应该开往何方"
         },
         {
+            "id": 6,
             "title": "Der Untergang",
             "description": "",
             "commend": ""
         },
         {
+            "id": 7,
             "title": "白い巨塔",
             "description": "",
             "commend": ""
         },
         {
+            "id": 8,
             "title": "无间道",
             "description": "",
             "commend": ""
         },
         {
+            "id": 9,
             "title": "大明王朝",
             "description": "",
             "commend": "我大明朝还有利剑吗！！！"
         },
         {
+            "id": 10,
             "title": "钢的琴",
             "description": "",
             "commend": ""
         },
         {
+            "id": 11,
             "title": "살인의 추억",
             "description": "",
             "commend": ""
         },
         {
+            "id": 12,
             "title": "Whiplash",
             "description": "",
             "commend": "有人评价我有一定的受虐倾向"
         },
         {
+            "id": 13,
             "title": "La La Land",
             "description": "",
             "commend": "City of star, are you shining just for me. City star, there are so much that I can't  see. Who knows, I felt it from the first embrace I shared with you. That now our dreams, they've finally come true.City of stars, just one thing everybody wants. There in the bars, and through the smokescreen of the crowded restaurants. It's love, yes all we're looking for is love from someone else. A rush  A glance  A touch, A dance.A look in somebody's eyes, to light up the skies, to open the world and send it reeling. A voice that says I'll be here and you'll be alright. I don't care if I know. Just where I will go. Cause all that I need is this crazy feeling. A rat-tat-tat on my heart. Think I want it to stay. City of stars, are you shining just for me. City of stars, you never shined so brightly"
         }
+    ],
+    "Ani": [
+        {
+            "id": 1,
+            "title": "パプリカ",
+            "description": "「ここは夢よ。だけど、現実と何が違うの？」",
+            "link_url": "https://www.imdb.com/title/tt0851578"
+        },
+        {
+            "id": 2,
+            "title": "中国奇谭",
+            "description": "现在大王给我派了很多事情，每天做都做不完",
+            "link_url": "https://www.imdb.com/title/tt26007176"
+        },
+        {
+            "id": 3,
+            "title": "「青春ブタ野郎」シリーズ",
+            "description": "「私、思っているより君のこと好きみたい。」",
+            "link_url": "https://zh.moegirl.org.cn/%E9%9D%92%E6%98%A5%E7%8C%AA%E5%A4%B4%E5%B0%91%E5%B9%B4%E7%B3%BB%E5%88%97"
+        },
+        {
+            "id": 4,
+            "title": "Cyberpunk Edgerrunners",
+            "description": "TO THE MOON",
+            "link_url": "https://www.imdb.com/title/tt12590266"
+        },
+        {
+            "id": 5,
+            "title": "進撃の巨人",
+            "description": "「向こうにいるのは、敵だ。」",
+            "link_url": "https://www.imdb.com/title/tt2560140"
+        },
+        {
+            "id": 6,
+            "title": "モブサイコ100",
+            "description": "「お前はもう、十分すごいよ。だから、無理するな。」",
+            "link_url": "https://www.imdb.com/title/tt5897304"
+        },
+        {
+            "id": 0,
+            "title": "言の葉の庭",
+            "description": "鸣神の 少しとよみて 降らずとも 我は止まらん 妹し留めば",
+            "link_url": "https://www.imdb.com/title/tt2591814"
+        }
+    ],
+    "Game": [
+        {
+            "id": 1,
+            "title": "黑神话：悟空",
+            "description": "若一去不回，便一去不回",
+            "link_url": "https://www.heishenhua.com/"
+        },
+        {
+            "id": 2,
+            "title": "SEKIRO Shadows Die Twice",
+            "description": "「迷えば、敗れる。」",
+            "link_url": "https://www.sekirothegame.com/"
+        },
+        {
+            "id": 3,
+            "title": "DETROIT Become Human",
+            "description": "rA9",
+            "link_url": "https://www.quanticdream.com/en/detroit-become-human"
+        },
+        {
+            "id": 0,
+            "title": "Ori and the Blind Forest",
+            "description": "A beautifully emotional journey of hope, sacrifice, and the search for family.",
+            "link_url": "https://www.orithegame.com/moon-studios/"
+        }
     ]
+
 }

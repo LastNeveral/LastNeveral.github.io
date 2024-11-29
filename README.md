@@ -8,17 +8,17 @@ please go to https://lastneveral.github.io/ to see.
 
 ![Alt text](assets/img/effect1.jpg)
 
-## ToDo Lists
-#### Home page
-- [x] re-create home page struct
-- [x] complete the selection of basic materials
-- [x] create JSON files to complete the random switching function
-- [x] responsive adaptation, especially page reconstruction for small screens
-#### Function pages
-- [x] establish function page layout
-- [ ] responsive adaptation
-- [ ] finish all the commends
+## TODO Lists
+- [x] Home page
+  - [x] re-create home page struct
+  - [x] complete the selection of basic materials
+  - [x] create JSON files to complete the random switching function
+  - [x] responsive adaptation, especially page reconstruction for small screens
+- [ ] Function pages
+  - [x] establish function page layout
+  - [x] responsive adaptation
+  - [ ] finish all the commends
 
-#### Aditional
-- [ ] continuous interactive effect beautification
-- [ ] search function
+- [ ] Aditional
+  - [ ] continuous interactive effect beautification
+  - [ ] search function

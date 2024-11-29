@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('../DB/Movie/commends.json')
+    fetch('../DB/Media/commends.json')
         .then(response => response.json())
         .then(data => {
             const container = document.querySelector('.reel');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const path = ".." + data.src;
             let itemWidth;
             if (document.body.clientWidth > 568) {
-                itemWidth = 160;
+                itemWidth = 150;
             }
             else {
                 itemWidth = 110;
