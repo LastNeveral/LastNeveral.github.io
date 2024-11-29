@@ -19,6 +19,10 @@ please go to https://lastneveral.github.io/ to see.
   - [x] responsive adaptation
   - [ ] finish all the commends
 
+- [ ] Restructure the website
+  - [ ] using Mysql to better manage data
+  - [ ] using Next.js to improve efficiency
+
 - [ ] Aditional
   - [ ] continuous interactive effect beautification
   - [ ] search function
